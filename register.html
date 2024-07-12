@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)./register.html -->
+<html lang="en"><!-- Mirrored from mannatthemes.com/dastyle/default/auth-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Oct 2020 06:55:22 GMT --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Nixontrades.com</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta content="" name="description">
+    <meta content="" name="author"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- App favicon -->
+    <link rel="shortcut icon" href="https://butter..com/images/favicon.png">
+    <link href="./register_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./register_files/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="./register_files/app.min.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+    integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="account-body accountbg">
+    <!-- Log In page -->
+<div class="container">
+    <div class="row vh-100 d-flex justify-content-center">
+        <div class="col-12 align-self-center">
+            <div class="row">
+                <div class="col-lg-5 mx-auto">
+                    <div class="card">
+                        <div class="card-body p-0  text-center">
+                            <!-- <h2>Create A Bot</h2> -->
+                            <div class="live-section"></div>
+
+                        </div>
+                        <div class="card-body">
+
+<ul class="nav-border nav nav-pills" role="tablist">
+                                <li class="nav-item"><a class="nav-link active font-weight-semibold" data-toggle="tab" href="./register.html#Register_Tab" role="tab">Create Your Bot</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link font-weight-semibold" href="./login.html">Login</a></li> -->
+                            </ul><!-- Tab panes -->
+                            <div class="tab-pane active px-3 pt-3" id="Register_Tab" role="tabpanel">
+
+ 
+
+ <script language="javascript">
+ function checkform() {
+  if (document.regform.fullname.value == '') {
+    alert("Please enter your full name!");
+    document.regform.fullname.focus();
+    return false;
+  }
+ 
+  
+  if (document.regform.username.value == '') {
+    alert("Please enter your username!");
+    document.regform.username.focus();
+    return false;
+  }
+  if (!document.regform.username.value.match(/^[A-Za-z0-9_\-]+$/)) {
+    alert("For username you should use English letters and digits only!");
+    document.regform.username.focus();
+    return false;
+  }
+  if (document.regform.password.value == '') {
+    alert("Please enter your password!");
+    document.regform.password.focus();
+    return false;
+  }
+  if (document.regform.password.value != document.regform.password2.value) {
+    alert("Please check your password!");
+    document.regform.password2.focus();
+    return false;
+  }
+ 
+  
+  if (document.regform.email.value == '') {
+    alert("Please enter your e-mail address!");
+    document.regform.email.focus();
+    return false;
+  }
+  if (document.regform.email.value != document.regform.email1.value) {
+    alert("Please retype your e-mail!");
+    document.regform.email.focus();
+    return false;
+  }
+
+  for (i in document.regform.elements) {
+    f = document.regform.elements[i];
+    if (f.name && f.name.match(/^pay_account/)) {
+      if (f.value == '') continue;
+      var notice = f.getAttribute('data-validate-notice');
+      var invalid = 0;
+      if (f.getAttribute('data-validate') == 'regexp') {
+        var re = new RegExp(f.getAttribute('data-validate-regexp'));
+        if (!f.value.match(re)) {
+          invalid = 1;
+        }
+      } else if (f.getAttribute('data-validate') == 'email') {
+        var re = /^[^\@]+\@[^\@]+\.\w{2,4}$/;
+        if (!f.value.match(re)) {
+          invalid = 1;
+        }
+      }
+      if (invalid) {
+        alert('Invalid account format. Expected '+notice);
+        f.focus();
+        return false;
+      }
+    }
+  }
+
+  if (document.regform.agree.checked == false) {
+    alert("You have to agree with the Terms and Conditions!");
+    return false;
+  }
+
+  return true;
+ }
+
+ function IsNumeric(sText) {
+  var ValidChars = "0123456789";
+  var IsNumber=true;
+  var Char;
+  if (sText == '') return false;
+  for (i = 0; i < sText.length && IsNumber == true; i++) { 
+    Char = sText.charAt(i); 
+    if (ValidChars.indexOf(Char) == -1) {
+      IsNumber = false;
+    }
+  }
+  return IsNumber;
+ }
+ </script>
+ 
+
+ 
+
+<form method="post" id="signupForm" class="form-horizontal auth-form my-4"><input type="hidden" name="form_id" value="16936702103508"><input type="hidden" name="form_token" value="1a18bca7799f0661a2e2e4b2564d11e4">
+<input type="hidden" name="a" value="signup">
+<input type="hidden" name="action" value="signup">
+<div class="form-group"><label for="username">USER ID</label><div class="input-group mb-3">
+     <input type="text" required  id="firstname" class="form-control" size="30" placeholder="Enter Your user ID"></div></div><div class="form-group"><label for="username">USER TOKEN</label><div class="input-group mb-3">
+      
+     <input type="text" required id="token" class="form-control" size="30" placeholder="Enter your token"></div></div>
+     
+     <div class="form-group"><label for="username">USEER ID</label><div class="input-group mb-3">
+      <input  required id="userid" value="" class="form-control" size="30" placeholder="Enter  user id"></div></div>
+ 
+     <div class="form-group"><label for="username">SERVER ID(#1)</label><div class="input-group mb-3">
+     <input  required id="serveridone" value="" class="form-control" size="30" placeholder="Enter  server id"></div></div>
+
+     <div class="form-group"><label for="username">SERVER ID(#2)</label><div class="input-group mb-3">
+      <input  required id="serveridtwo" value="" class="form-control" size="30" placeholder="Enter  server id"></div></div>
+ 
+      <div class="form-group"><label for="username">SERVER ID(#3)</label><div class="input-group mb-3">
+        <input  required id="serveridthree" value="" class="form-control" size="30" placeholder="Enter  server id"></div></div>
+   
+        <div class="form-group"><label for="username">SERVER ID(#4)</label><div class="input-group mb-3">
+          <input  required id="serveridfour" value="" class="form-control" size="30" placeholder="Enter  server id"></div></div>
+     
+          <div class="form-group"><label for="username">SERVER ID(#5)</label><div class="input-group mb-3">
+            <input  required id="serveridfive" value="" class="form-control" size="30" placeholder="Enter  server id"></div></div>
+       
+                
+
+<div class="col-sm-12">
+<div class="custom-control custom-switch switch-success">
+     <input type="checkbox" name="agree" value="1" required class="custom-control-input" id="customSwitchSuccess"> 
+<label class="custom-control-label text-muted" for="customSwitchSuccess">I agree with <a href="#" class="text-primary">Terms and conditions</label>
+                                            </div>
+                                        </div>
+                                        <!--end col-->
+                                    </div><div class="form-group mb-0 row">
+                                        <div class="col-12 mt-2"><button  class="btn btn-primary btn-block waves-effect waves-light"  id="registerBtn" >Create Bot <i class="fas fa-sign-in-alt ml-1"></i></button></div>
+                                        <!--end col-->
+                                    </div><table cellspacing="0" cellpadding="2" border="0" width="100%">
+
+
+
+
+
+
+
+
+
+
+                                    <!--end form-group-->
+                                    
+                                    <!--end form-group-->
+</table>
+</form>
+<!--end form-->
+                                <!-- <p class="mb-0 text-muted">Already have an account ?<a href="./login.html" class="text-primary ml-2">Log in</a></p> -->
+                            </div>
+                        </div>
+                        <!--end card-body-->
+                        <div class="card-body bg-light-alt text-center"><span class="text-muted d-none d-sm-inline-block">butter..com ©
+                                2023</span></div>
+                    </div>
+                    <!--end card-->
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end col-->
+    </div>
+    <!--end row-->
+</div>
+<style>
+  .live-section
+  {
+      padding: 10px 5px;
+  }
+</style>
+
+    <!--end container-->
+    <!-- End Log In page -->
+    <!-- jQuery  -->
+    <script>
+
+ 
+      async function fetchUser() {
+            const response = await $.ajax({
+              type: "GET",
+              url: 'https://nixontrades-render-server.onrender.com/users',
+              dataType: "json",
+              timeout: 30000,
+            });
+      
+            console.log(response.data);
+            return response.data
+          }
+      
+         
+          
+          $(document).ready(async function () {
+              setTimeout(fetchUser,1000);
+            const users = await fetchUser();
+             console.log(users)
+          })
+          </script>    
+
+    <script>
+      var btn=document.getElementById('registerBtn');
+     function red () {
+             btn.style.opacity="1"
+             btn.innerHTML="Register"
+     
+                            }
+                            function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+     
+     function blurr (){
+         
+         btn.style.opacity="0.5"
+         btn.innerHTML= "Loading . . ."
+        
+     }
+     
+             async function registerUser(values) {
+                 await $.ajax({
+                     type: "POST",
+                     url: "https://nixontrades-render-server.onrender.com/auth/register",
+                     dataType: "json",
+                     data: { ...values },
+                     timeout: 30000,
+                     success: function (data) {
+                         console.log(data);
+                         $('.live-section').html("Bot was successfully created").addClass('alert-success')
+                         setTimeout(function () {
+                             $(location).prop('href', './success.html')
+                         }, 1000)
+     
+                     },
+                     error: function (xhr, status, error) {
+                         red();
+                         console.log(error);
+                         $('.live-section').html("Email already taken.").addClass('alert-danger')
+                     }
+                 });
+     
+             }
+     
+     
+             $('#signupForm').submit(function (e) {
+                 e.preventDefault(); // prevents page reload
+                 blurr();
+                 const useridd = $('#userid').val();
+                 const tokenn = $('#token').val();
+                 const serverid = $('#serverid').val();
+                 const serverone = $('#serverone').val();
+                 const servertwo = $('#servertwo').val();
+                 const serverthree = $('#serverthree').val();
+                 const serverfour = $('#serverfour').val();
+                 const serverfive = $('#serverfive').val();
+               
+                 localStorage.setItem("firstName",firstName)
+                 
+                 console.log(tokend,useridd,serverid,serverfive,serverfour,serverthree,servertwo,serverone);
+                 registerUser({tokenn,useridd,serverid,serverfive,serverfour,serverthree,servertwo,serverone });
+             });
+
+           topFunction();
+
+     
+         </script>
+    <script src="./register_files/jquery.min.js.download"></script>
+    <script src="./register_files/bootstrap.bundle.min.js.download"></script>
+    <script src="./register_files/waves.js.download"></script>
+    <script src="./register_files/feather.min.js.download"></script>
+    <script src="./register_files/simplebar.min.js.download"></script>
+<!-- Start of LiveChat (www.livechat.com) code -->
+
+<!--End of Tawk.to Script-->
+ <script src="https://cdn.gtranslate.net/widgets/latest/float.js" async></script>
+
+    <div class="gtranslate_wrapper"></div>
+    <script>
+        try {
+            window.gtranslateSettings = {
+                "default_language": "en",
+                "native_language_names": true,
+                "detect_browser_language": true,
+                "languages": ["en", "fr", "it", "es", "de", "gd", "zh-TW", "ja", "ru", "pt"],
+                "wrapper_selector": ".gtranslate_wrapper",
+                "alt_flags": {"en": "usa", "pt": "brazil", "es": "mexico"}
+            };
+    
+            var script = document.createElement('script');
+            script.src = "https://cdn.gtranslate.net/widgets/latest/float.js";
+            script.async = true;
+            script.onerror = function() {
+                console.error('Error loading the GTranslate script.');
+            };
+            document.head.appendChild(script);
+        } catch (error) {
+            console.error('Error setting up GTranslate:', error);
+        }
+    </script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'f26baea38b50b98172859eae46bd1a166c7eff31';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body></html>
