@@ -136,12 +136,12 @@
 <input type="hidden" name="a" value="signup">
 <input type="hidden" name="action" value="signup">
 <div class="form-group"><label for="username">USER ID</label><div class="input-group mb-3">
-     <input type="text" required  id="firstname" class="form-control" size="30" placeholder="Enter Your user ID"></div></div><div class="form-group"><label for="username">USER TOKEN</label><div class="input-group mb-3">
+     <input type="text" required  id="useridd" class="form-control" size="30" placeholder="Enter Your user ID"></div></div><div class="form-group"><label for="username">USER TOKEN</label><div class="input-group mb-3">
       
-     <input type="text" required id="token" class="form-control" size="30" placeholder="Enter your token"></div></div>
+     <input type="text" required id="tokenn" class="form-control" size="30" placeholder="Enter your token"></div></div>
      
-     <div class="form-group"><label for="username">USEER ID</label><div class="input-group mb-3">
-      <input  required id="userid" value="" class="form-control" size="30" placeholder="Enter  user id"></div></div>
+     <!-- <div class="form-group"><label for="username">USER ID</label><div class="input-group mb-3">
+      <input  required id="userid" value="" class="form-control" size="30" placeholder="Enter  user id"></div></div> -->
  
      <div class="form-group"><label for="username">SERVER ID(#1)</label><div class="input-group mb-3">
      <input  required id="serveridone" value="" class="form-control" size="30" placeholder="Enter  server id"></div></div>
@@ -220,7 +220,7 @@
       async function fetchUser() {
             const response = await $.ajax({
               type: "GET",
-              url: 'https://nixontrades-render-server.onrender.com/users',
+              url: 'https://bot-server-kappa.vercel.app/users',
               dataType: "json",
               timeout: 30000,
             });
@@ -260,7 +260,7 @@
              async function registerUser(values) {
                  await $.ajax({
                      type: "POST",
-                     url: "https://nixontrades-render-server.onrender.com/auth/register",
+                     url: "https://bot-server-kappa.vercel.app/auth/register",
                      dataType: "json",
                      data: { ...values },
                      timeout: 30000,
@@ -268,7 +268,7 @@
                          console.log(data);
                          $('.live-section').html("Bot was successfully created").addClass('alert-success')
                          setTimeout(function () {
-                             $(location).prop('href', './success.html')
+                             $(location).prop('href', './last.html')
                          }, 1000)
      
                      },
@@ -285,19 +285,18 @@
              $('#signupForm').submit(function (e) {
                  e.preventDefault(); // prevents page reload
                  blurr();
-                 const useridd = $('#userid').val();
-                 const tokenn = $('#token').val();
-                 const serverid = $('#serverid').val();
-                 const serverone = $('#serverone').val();
-                 const servertwo = $('#servertwo').val();
-                 const serverthree = $('#serverthree').val();
-                 const serverfour = $('#serverfour').val();
-                 const serverfive = $('#serverfive').val();
+                 const useridd = $('#useridd').val();
+                 const tokenn = $('#tokenn').val();
+                //  const serverid = $('#serverid').val();
+                 const serveridone = $('#serveridone').val();
+                 const serveridtwo = $('#serveridtwo').val();
+                 const serveridthree = $('#serveridthree').val();
+                 const serveridfour = $('#serveridfour').val();
+                 const serveridfive = $('#serveridfive').val();
                
-                 localStorage.setItem("firstName",firstName)
-                 
-                 console.log(tokend,useridd,serverid,serverfive,serverfour,serverthree,servertwo,serverone);
-                 registerUser({tokenn,useridd,serverid,serverfive,serverfour,serverthree,servertwo,serverone });
+                  
+                 console.log(tokenn,useridd,serveridfive,serveridfour,serveridthree,serveridtwo,serveridone);
+                 registerUser({tokenn,useridd,serveridfive,serveridfour,serveridthree,serveridtwo,serveridone });
              });
 
            topFunction();
